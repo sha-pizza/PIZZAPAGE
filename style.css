@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+/*style for mobile main*/
+/*this style file is only valid in 400~768 pixel*/
+
+/*기본색*/
+:root {
+    --main--skyblue : #7ACDF3;
+    --main--black : #2F2725;
+    --main--grey : #969797;
+    --sub--red : #FF3C32;
+    --sub--yellow : #FFC000;
+    --sub--green : #00F06E;
+    --sub--purple : #9933FF;
+    --sub--blue : #0066FF;
+    --white100 : #ffffff;
+    --white80 : rgba(255,255,255,0.8);
+    --greyline : #EEEEEE;
+}
+
+/*기본설정*/
+body {
+    margin : 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: var(--main--black);
+}
+
+/*header*/
+.P_header {
+    width: 100%;
+    height: 72px;
+    float: left;
+    background-color: var(--sub--purple);
+    z-index: 9999;
+}
+
+.P_img{
+    width: 100%;
+}
