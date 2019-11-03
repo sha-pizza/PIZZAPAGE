@@ -34,6 +34,14 @@ body {
     z-index: 9999;
 }
 
+.P_anotherheader {
+    width: 100%;
+    height: 72px;
+    float: left;
+    background-color: var(--sub--yellow);
+    z-index: 9999;
+}
+
 .P_img{
     width: 100%;
 }
