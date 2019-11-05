@@ -1,0 +1,117 @@
+<div style="padding-top: 38px; padding-left: 38px; ">
+    <img src="img/logo.gif">
+</div>
+
+<div class = "PwHeaderDiv">
+    <h3>LEESANGAH</h3>
+    <h3>WEB-ARCHIEVE</h3>
+</div>
+
+<div class = "PwHeaderDiv">
+    <h1 id="menu_portfolio">PORTFOLIO -></h1>
+    <h1 id="menu_archieve">ARCHIEVE -></h1>
+</div>
+
+<div class = "PwHeaderDiv">
+    <h4 id="link_instagram">@SHA_PIZZA -></h4>
+    <h4 id="link_behance">behance.net -></h4>
+    <h4 id="link_notefolio">notefolio.net -></h4>
+</div>
+
+<script>
+    $(document).ready(function(){
+        /*initial setting*/
+        $("#menu_portfolio").css("color", "var(--main--black)" );
+        $("#menu_archieve").css("color", "var(--main--grey)" );
+        $('#div_body').load('PwPortfolio.html');
+    });
+
+    $(function(){
+        var nowbody = "P";
+
+        // menu_porfolio
+        $("#menu_portfolio").mouseenter(function(){
+            $("#menu_portfolio").css("background-color", "var(--sub--green)" );
+            $("#menu_portfolio").css("color", "var(--main--black)" );
+        });
+        $("#menu_portfolio").mouseleave(function(){
+            $("#menu_portfolio").css("background-color", "var(--sub--trans)" );
+            if (nowbody==="P"){
+                $("#menu_portfolio").css("color", "var(--main--black)" );
+            } else {
+                $("#menu_portfolio").css("color", "var(--main--grey)" );
+            }
+        });
+        $("#menu_portfolio").click(function(){
+            $("#menu_portfolio").css("color", "var(--main--black)" );
+            $("#menu_archieve").css("color", "var(--main--grey)" );
+            $('#div_body').load('PwPortfolio.html');
+            nowbody = "P";
+        });
+
+        // menu_archieve
+        $("#menu_archieve").mouseenter(function(){
+            $("#menu_archieve").css("background-color", "var(--sub--green)" );
+            $("#menu_archieve").css("color", "var(--main--black)" );
+        });
+        $("#menu_archieve").mouseleave(function(){
+            $("#menu_archieve").css("background-color", "var(--sub--trans)" );
+            if (nowbody==="A"){
+                $("#menu_archieve").css("color", "var(--main--black)" );
+            } else {
+                $("#menu_archieve").css("color", "var(--main--grey)" );
+            }
+        });
+        $("#menu_archieve").click(function(){
+            $("#menu_portfolio").css("color", "var(--main--grey)" );
+            $("#menu_archieve").css("color", "var(--main--black)" );
+            $('#div_body').load('PwArchieve.html');
+            nowbody = "A"
+        });
+
+        // link_instagram
+        $("#link_instagram").mouseenter(function(){
+            $("#link_instagram").css("background-color", "var(--sub--green)" );
+            $("#link_instagram").css("color", "var(--main--black)" );
+        });
+        $("#link_instagram").mouseleave(function(){
+            $("#link_instagram").css("background-color", "var(--sub--trans)" );
+            $("#link_instagram").css("color", "var(--main--grey)" );
+        });
+        $("#link_instagram").click(function(){
+            window.open("https://www.instagram.com/sha_pizza/");
+        });
+
+        // link_behance
+        $("#link_behance").mouseenter(function(){
+            $("#link_behance").css("background-color", "var(--sub--green)" );
+            $("#link_behance").css("color", "var(--main--black)" );
+        });
+        $("#link_behance").mouseleave(function(){
+            $("#link_behance").css("background-color", "var(--sub--trans)" );
+            $("#link_behance").css("color", "var(--main--grey)" );
+        });
+        $("#link_behance").click(function(){
+            window.open("https://www.behance.net/SHA_PIZZA");
+        });
+
+        // link_notefolio
+        $("#link_notefolio").mouseenter(function(){
+            $("#link_notefolio").css("background-color", "var(--sub--green)" );
+            $("#link_notefolio").css("color", "var(--main--black)" );
+        });
+        $("#link_notefolio").mouseleave(function(){
+            $("#link_notefolio").css("background-color", "var(--sub--trans)" );
+            $("#link_notefolio").css("color", "var(--main--grey)" );
+        });
+        $("#link_notefolio").click(function(){
+            window.open("https://notefolio.net/SHA_PIZZA");
+        });
+
+    });
+
+
+     
+
+        
+    </script>

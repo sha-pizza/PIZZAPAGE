@@ -4,10 +4,16 @@
         <meta charset="utf-8">
         <title>PIZZA_prototype</title>
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-        <link rel = "stylesheet" href="style.css">
-        <link rel="shortcut icon" type="image⁄x-icon" href="img/0_indexcuckoo.png">
+        <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 
+        <link rel = "stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image⁄x-icon" href="img/profileimg.png">
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        
     </head>
 
     <style>
@@ -16,14 +22,21 @@
    
     <body>
 
-        <section class="P_header">
-            TESTERPAGE
-        </section>
+        <div id="div_header" >
+        </div>
 
-        <hr class="greyline"></hr>
+        <div id="div_body" >
+            error during load body ...
+        </div>
 
-        <section class="P_imgplace">
-            <img class="P_img" src="img/s2_back.jpg">
-        </section>
     
+
     </body>
+    <script>  
+        $(document).ready(function(){
+            /*initial setting*/
+            $('#div_header').load('PwHeader.html');
+        });
+    </script>
+
+</html>

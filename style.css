@@ -5,43 +5,98 @@
 
 /*기본색*/
 :root {
-    --main--skyblue : #7ACDF3;
+    --main--white : #FFFFFF;
     --main--black : #2F2725;
-    --main--grey : #969797;
+    --main--grey : #AAAAAA;
+    --sub--lightgrey : #DDDDDD;
+    --sub--trans : rgba(0,0,0,0);
     --sub--red : #FF3C32;
     --sub--yellow : #FFC000;
-    --sub--green : #00F06E;
     --sub--purple : #9933FF;
     --sub--blue : #0066FF;
-    --white100 : #ffffff;
-    --white80 : rgba(255,255,255,0.8);
-    --greyline : #EEEEEE;
+    --sub--green : #00F06E;
 }
 
-/*기본설정*/
+/*main components*/
 body {
-    margin : 0;
+    margin: 0;
     font-family: 'Noto Sans KR', sans-serif;
-    background-color: var(--main--black);
+    background-color: var(--sub--lightgrey);
+    height: 100%;
 }
 
-/*header*/
-.P_header {
-    width: 100%;
-    height: 72px;
-    float: left;
-    background-color: var(--sub--purple);
-    z-index: 9999;
+#div_header { 
+    float: left; 
+    width: 240px; 
+    height: 100%; 
+    position: fixed;
 }
 
-.P_anotherheader {
+#div_body {
+    float: right;
     width: 100%;
-    height: 72px;
-    float: left;
-    background-color: var(--sub--yellow);
-    z-index: 9999;
+    margin-left: -240px;
+    padding-left: 240px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-.P_img{
-    width: 100%;
+/* disable scroll bar*/
+#div_body::-webkit-scrollbar {
+    display: none;
+}
+
+/*font variation*/
+/* font-family: 'Noto Sans KR', sans-serif;                                */
+/* font-family: 'Source Code Pro', monospace;                               */
+/* font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';        */
+
+h1 {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--main--black);
+    font-weight: 700;
+    font-size: 20px;
+    width: fit-content;
+    height: 28px;
+    margin: 0;
+    
+}
+
+h3 {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--main--black);
+    font-weight: 700;
+    font-size: 14px;
+    width: fit-content;
+    height: 20px;
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--main--grey);
+    font-weight: 700;
+    font-size: 14px;
+    width: fit-content;
+    height: 20px;
+    margin: 0;
+}
+
+
+
+
+/*components in PwHeader*/
+.PwHeaderDiv {
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+
+/*components in PwPortfolio*/
+.PwPortfolioArticle{
+    width: 99%;
+    height: 500px;
+    background-color: var(--sub--green);
+    margin-bottom: 10px;
 }
