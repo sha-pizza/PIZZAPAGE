@@ -3,10 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>PIZZA_prototype</title>
-        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.5">
         
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-        <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 
         <link rel = "stylesheet" href="style.css">
@@ -22,11 +21,22 @@
    
     <body>
 
+        <div id="div_upper">
+            <div style="position:absolute; padding-top: 38px; padding-left: 38px; ">
+                <img src="img/logo.gif">
+            </div>
+        </div>
+
         <div id="div_header" >
         </div>
 
         <div id="div_body" >
-            error during load body ...
+            <div id="div_content">
+                error during load body ...
+            </div>
+            <div id="div_footer">
+                
+            </div>
         </div>
 
     
@@ -36,6 +46,7 @@
         $(document).ready(function(){
             /*initial setting*/
             $('#div_header').load('PwHeader.html');
+            $('#div_footer').load('PwFooter.html');
         });
     </script>
 

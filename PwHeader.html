@@ -1,21 +1,22 @@
-<div style="padding-top: 38px; padding-left: 38px; ">
-    <img src="img/logo.gif">
-</div>
 
-<div class = "PwHeaderDiv">
-    <h3>LEESANGAH</h3>
-    <h3>WEB-ARCHIEVE</h3>
-</div>
 
-<div class = "PwHeaderDiv">
-    <h1 id="menu_portfolio">PORTFOLIO -></h1>
-    <h1 id="menu_archieve">ARCHIEVE -></h1>
-</div>
 
-<div class = "PwHeaderDiv">
-    <h4 id="link_instagram">@SHA_PIZZA -></h4>
-    <h4 id="link_behance">behance.net -></h4>
-    <h4 id="link_notefolio">notefolio.net -></h4>
+<div style="position: relative; height: 100%; padding-left: 40px;"></div>
+    <div class = "PwHeaderDivUp">
+        <h1 id="menu_portfolio">PORTFOLIO -></h1>
+        <h1 id="menu_archieve">ARCHIEVE -></h1>
+    </div>
+
+    <div class = "PwHeaderDivDown">
+        <h3>LEESANGAH</h3>
+        <h3>WEB-ARCHIEVE</h3>
+        <h3></h3>
+        <h4 id="link_instagram">@SHA_PIZZA -></h4>
+        <h4 id="link_behance">behance.net -></h4>
+        <h4 id="link_notefolio">notefolio.net -></h4>
+        <h3></h3>
+        <hr class="line1">
+    </div>
 </div>
 
 <script>
@@ -23,11 +24,11 @@
         /*initial setting*/
         $("#menu_portfolio").css("color", "var(--main--black)" );
         $("#menu_archieve").css("color", "var(--main--grey)" );
-        $('#div_body').load('PwPortfolio.html');
+        $('#div_content').load('PwPortfolio.html');
     });
 
     $(function(){
-        var nowbody = "P";
+        var nowContent = "P";
 
         // menu_porfolio
         $("#menu_portfolio").mouseenter(function(){
@@ -36,7 +37,7 @@
         });
         $("#menu_portfolio").mouseleave(function(){
             $("#menu_portfolio").css("background-color", "var(--sub--trans)" );
-            if (nowbody==="P"){
+            if (nowContent==="P"){
                 $("#menu_portfolio").css("color", "var(--main--black)" );
             } else {
                 $("#menu_portfolio").css("color", "var(--main--grey)" );
@@ -45,8 +46,8 @@
         $("#menu_portfolio").click(function(){
             $("#menu_portfolio").css("color", "var(--main--black)" );
             $("#menu_archieve").css("color", "var(--main--grey)" );
-            $('#div_body').load('PwPortfolio.html');
-            nowbody = "P";
+            $('#div_content').load('PwPortfolio.html');
+            nowContent = "P";
         });
 
         // menu_archieve
@@ -56,7 +57,7 @@
         });
         $("#menu_archieve").mouseleave(function(){
             $("#menu_archieve").css("background-color", "var(--sub--trans)" );
-            if (nowbody==="A"){
+            if (nowContent==="A"){
                 $("#menu_archieve").css("color", "var(--main--black)" );
             } else {
                 $("#menu_archieve").css("color", "var(--main--grey)" );
@@ -65,8 +66,8 @@
         $("#menu_archieve").click(function(){
             $("#menu_portfolio").css("color", "var(--main--grey)" );
             $("#menu_archieve").css("color", "var(--main--black)" );
-            $('#div_body').load('PwArchieve.html');
-            nowbody = "A"
+            $('#div_content').load('PwArchieve.html');
+            nowContent = "A"
         });
 
         // link_instagram
