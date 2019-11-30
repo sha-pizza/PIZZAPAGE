@@ -8,7 +8,8 @@
     --main--white : #FFFFFF;
     --main--black : #2F2725;
     --main--grey : #AAAAAA;
-    --sub--lightgrey : #DDDDDD;
+    --sub--Dgrey : #DDDDDD;
+    --sub--lightgrey : #EEEEEE;
     --sub--trans : rgba(0,0,0,0);
     --sub--red : #FF3C32;
     --sub--yellow : #FFC000;
@@ -23,42 +24,49 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color: var(--sub--lightgrey);
     height: 100%;
+    align-items: center;
+    min-width: 920px;
     /*background: url('Port_head/181201.png') no-repeat center/cover;*/
 }
 
 #div_upper { 
-    height: 120px; 
-    width: 100%; 
+    width: 16%; 
+    height: 100%; 
     background-color: var(--sub--trans); 
     position: fixed;
+    z-index: 9999;
 }
 
 #div_header {
-    float: left; 
-    width: 220px; 
-    height: 100%; 
-    position: fixed;
+    /*float: left; */
+    width: 72%; 
+    height: 80px; 
+    margin-left: 16%;
+    margin-right: auto;
+    padding-top: 20px;
+    position: relative;
 }
 
 #div_body {
-    float: right;
-    width: 100%;
-    margin-left: -220px;
+    /*float: right;*/
+    width: 72%;
+    margin-left: 16%;
+    margin-right: auto;
+    
+    position: relative;
+    /*margin-left: -220px;
     padding-right: 40px;
-    padding-left: 220px;
+    padding-left: 220px;*/
     box-sizing: border-box;
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
 #div_footer {
-    text-align: end;
-    font-family: 'Source Code Pro', monospace;
-    color: var(--main--grey);
-    font-weight: 700;
-    font-size: 14px;
+    width: fit-content;
     height: fit-content;
-    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 40px;
 }
 
@@ -66,10 +74,10 @@ body {
 #div_body::-webkit-scrollbar {
     display: none;
 }
-
+/*
 html::-webkit-scrollbar {
     display: none;
-}
+}*/
 
 
 /*font variation*/
@@ -108,25 +116,45 @@ h4 {
     margin: 0;
 }
 
+h5 {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--main--grey);
+    font-weight: 400;
+    font-size: 12px;
+    width: fit-content;
+    height: 16px;
+    margin: 0;
+}
+
 /*line objects*/
 .line1 {
+    width: 100%;
     margin: 0; 
     border: 2px solid var(--main--black);
     height: 0;
 }
 
-
-/*components in PwHeader*/
-.PwHeaderDivUp {
-    position: absolute;;
-    left: 40px;
-    top: 128px;
+.linelight {
+    width: 100%;
+    margin: 0; 
+    border: 0.5px solid var(--sub--Dgrey);
+    height: 0;
 }
 
-.PwHeaderDivDown {
-    position: absolute;
-    left: 40px;
-    bottom: 40px;
+
+/*components in PwHeader*/
+.PwHeaderDivLeft {
+    float: left;
+}
+
+.PwHeaderDivMenu {
+    float: left;
+    margin-right: 20px;
+}
+
+.PwHeaderDivRight {
+    float: right;
+    margin-left: 40px;
 }
 
 
