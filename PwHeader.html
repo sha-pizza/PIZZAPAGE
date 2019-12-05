@@ -1,11 +1,10 @@
 
-<div class = "PwHeaderDivLeft">
-    <h3>LEESANGAH</h3>
-    <h3>WEB-ARCHIEVE</h3>
+
+<div class = "PwHeaderDivLeft" >
+    <h2 id="menu_portfolio" style="text-decoration-line: underline;">PORTFOLIO-></h2>
 </div>
 <div class = "PwHeaderDivLeft">
-    <h3 id="menu_portfolio" style="text-decoration-line: underline;">PORTFOLIO-></h3>
-    <h3 id="menu_archieve"  style="text-decoration-line: underline;">ARCHIEVE-></h3>
+    <h2 id="menu_archieve"  style="text-decoration-line: underline;">ARCHIEVE-></h2>
 </div>
 
 
@@ -25,12 +24,19 @@
 
 
 
+
+
+
+
+
+
+
 <script>
     $(document).ready(function(){
         /*initial setting*/
         $("#menu_portfolio").css("color", "var(--main--black)" );
         $("#menu_archieve").css("color", "var(--main--grey)" );
-        $('#div_content').load('PwPortfolio.html');
+        $('#div_body').load('PwPortfolio.html');
     });
 
     $(function(){
@@ -52,7 +58,7 @@
         $("#menu_portfolio").click(function(){
             $("#menu_portfolio").css("color", "var(--main--black)" );
             $("#menu_archieve").css("color", "var(--main--grey)" );
-            $('#div_content').load('PwPortfolio.html');
+            $('#div_body').load('PwPortfolio.html');
             nowContent = "P";
         });
 
@@ -72,7 +78,7 @@
         $("#menu_archieve").click(function(){
             $("#menu_portfolio").css("color", "var(--main--grey)" );
             $("#menu_archieve").css("color", "var(--main--black)" );
-            $('#div_content').load('PwArchieve.html');
+            $('#div_body').load('PwArchieve.html');
             nowContent = "A"
         });
 

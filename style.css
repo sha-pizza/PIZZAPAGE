@@ -1,13 +1,16 @@
 @charset "UTF-8";
 
-/*style for mobile main*/
-/*this style file is only valid in 400~768 pixel*/
+/*style for desktop main*/
+/*width : 720 up pixel*/
 
 /*기본색*/
 :root {
+    --back : #ffffff;
     --main--white : #FFFFFF;
-    --main--black : #2F2725;
-    --main--grey : #AAAAAA;
+    --main--black : #000000;
+    --main--grey : #111111;
+    --sub--5grey : #555555;
+    --sub--Bgrey : #BBBBBB;
     --sub--Dgrey : #DDDDDD;
     --sub--Egrey : #EEEEEE;
     --sub--trans : rgba(0,0,0,0);
@@ -31,8 +34,17 @@ h1 {
     font-size: 20px;
     width: fit-content;
     height: 28px;
+    margin: 0;   
+}
+
+h2 {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--main--black);
+    font-weight: 700;
+    font-size: 16px;
+    width: fit-content;
+    height: 20px;
     margin: 0;
-    
 }
 
 h3 {
@@ -94,51 +106,67 @@ h6 {
 }
 
 
+/*----------------------------------------------------------------------------------------*/
+/* 0 display position z-index float
+ * 1 box-sizing overflow
+ * 2 color
+ * 3 width height
+ * 4 padding border margin
+ * 5 font
+ * 6
+ */
+
 /*main components*/
-body {
-    margin: 0;
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: var(--sub--Dgrey);
+html {
+    min-width: 720px;
+    min-height: 720px;
+
+}
+
+body { 
+    background-color: var(--back);
     height: 100%;
-    align-items: center;
-    min-width: 920px;
+    margin: 0;
     /*background: url('Port_head/181201.png') no-repeat center/cover;*/
 }
 
 #div_upper { 
     box-sizing: border-box;
+    z-index: 9999; 
     position: fixed; 
-    width: 16%; 
-    min-width: 147px; 
-    height: 100%;
+    width: 100%;
+    height: fit-content;
+    min-width: 720px;
+}
 
-    padding: 18px;
-    background-color: var(--sub--trans); 
-   
-    z-index: 9999;  
+#div_upper_wrapper {
+    width: 480px;
+    height: 50px;
+    margin: 18px auto 0 auto;
+    
 }
 
 #div_header {
-    /*float: left; */
-    width: 72%; 
-    height: 56px; 
-    margin-left: 16%;
-    margin-right: auto;
-    padding-top: 20px;
     position: relative;
+    z-index: 9998; 
+    width: 480px; 
+    height: 36px; 
+    margin: 0 auto 0 auto;
+    padding-top: 108px;
 }
 
 #div_body {
-    /*float: right;*/
-    width: 72%;
-    margin-left: 16%;
-    margin-right: auto;
-    
-    position: relative;
+    position: absolute;
+    top: 0;
     box-sizing: border-box;
-    overflow-y: scroll;
-    /*overflow-x: hidden;*/
+    width: 100%;
+    height: 100vh;
+
 }
+
+
+
+
 
 #div_footer {
     width: fit-content;
@@ -149,13 +177,9 @@ body {
 }
 
 /* disable scroll bar*/
-#div_body::-webkit-scrollbar {
-    display: none;
-}
-/*
 html::-webkit-scrollbar {
     display: none;
-}*/
+}
 
 
 
@@ -163,27 +187,84 @@ html::-webkit-scrollbar {
 /*components in PwHeader*/
 .PwHeaderDivLeft {
     float: left;
-    margin-right: 72px;
+    margin-right: 24px;
 }
 
 .PwHeaderDivRight {
     float: right;
     margin-left: 14px;
+    margin-top: 1px;
 }
 
 
 /*components in PwPortfolio*/
-#PwPortfolio {
-    list-style: none;
-    margin: 0;
-    padding: 0;    
-}
-.PwPortfolioList{
+#PwPortfolio_wrapouter {
+    display : -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    overflow: hidden;
     width: 100%;
-    height: 320px;
+    height: 96vh;
+    min-height: 720px;
+}
+
+
+#PwPortfolio_wrapinner {
+    display : -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 60vh;
+
+    min-height: 420px;
+    margin-top: 144px;
+}
+
+#PwPortfolio {
+    -webkit-flex : 1;
+	flex : 1;
+
+    display : -webkit-flex;
+    display: flex;
+    flex-direction: row;
+
+    width: 100vw;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#PwPortfolio::-webkit-scrollbar {
+    display: none;
+}
+
+#PwPortfolio_description {
+    width: 480px; 
+    height: 48px; 
+    margin: 0 auto 0 auto;
+    padding: 24px 0 0 0;
+}
+
+
+.PwPortfolioList{
+    flex: 1 0 480px; /*1 0 -> 증가또는 감소금지  480-> 사용할 길이*/
+    height: 100%;
     background-color: var(--sub--green);
     overflow: hidden;
     margin-bottom: 10px;
+}
+
+.PwPortfolio_padding {
+    width: 10px;
+    background-color: var(--sub--blue);
 }
 
 .PwPortfolioArticle{
@@ -193,3 +274,4 @@ html::-webkit-scrollbar {
     background-position: center;
     background-size: cover;
 }
+

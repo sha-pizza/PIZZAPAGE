@@ -1,11 +1,45 @@
 
-<ul id="PwPortfolio">
-</ul>
 
+
+<div id="PwPortfolio_wrapouter">
+    <div id="PwPortfolio_wrapinner">
+        <ul id="PwPortfolio">
+            <!--portfolio image objects-->
+        </ul>
+        <div id="PwPortfolio_description">
+            <h4>Empty title</h4>
+            <h5>Empty sub</h5>
+            <h6>여기부터 본문, 작품과 관련된 한줄설명</h6>
+        </div>
+    </div>
+
+    
+    
+    
+</div>
 
 <script>
     $(document).ready(function(){
+        // horizontal scroll
+        $('#PwPortfolio').on('mousewheel',function(e){
+            var wheelDelta = e.originalEvent.wheelDelta;
+            if(wheelDelta > 0){
+                console.log("up");
+                $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+            } else {
+                console.log("down");
+                $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+            }
+        });
+        // set left-padding size
+        // 화면 사이즈 바뀔때마다 변경되거나
+        // 아예 두번째 작업물부터 보이게 수정
+        var lpadding = ($("#PwPortfolio_wrapouter").width() - 480) /2;
+        $("#PwPortfolio").append('<li><p style="width:'+ lpadding +'px"></p></li>');
+        
+        // get files
         $.getJSON("Port_head/headinfo.json", function(data){
+            
             // 받아온 각 정보{}에 대해
             $.each(data, function(entryIndex, entry){
                 var H = "";
@@ -19,6 +53,8 @@
                 H += '</article>';
                 H += '</a>';
                 H += '</li>';
+
+                H += '<li><p class="PwPortfolio_padding"></p></li>';
                 // add info on html and css
                 $("#PwPortfolio").append(H);
 
@@ -44,3 +80,4 @@
         return false;
     });
 </script>
+-->
