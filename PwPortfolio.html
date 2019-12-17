@@ -7,9 +7,11 @@
             <!--portfolio image objects-->
         </ul>
         <div id="PwPortfolio_description">
+            <!--
             <h4>Empty title</h4>
             <h5>Empty sub</h5>
             <h6>여기부터 본문, 작품과 관련된 한줄설명</h6>
+            -->
         </div>
     </div>
 
@@ -44,11 +46,11 @@
             $.each(data, function(entryIndex, entry){
                 var H = "";
                 H += '<li class="PwPortfolioList">';
-                H += '<a href='+entry.link+'> ';
+                H += '<a style="text-decoration:none" href='+entry.link+'> ';
                 H += '<article id='+entryIndex+' class="PwPortfolioArticle">';
 
-                H += '<h3>'+entry.title+'</h3>';
-                H += '<h4>'+entry.description+'</h4>';
+                //H += '<h3>'+"   "+entry.title+'</h3>';
+                //H += '<h4>'+"   "+entry.description+'</h4>';
 
                 H += '</article>';
                 H += '</a>';
@@ -80,4 +82,3 @@
         return false;
     });
 </script>
--->
